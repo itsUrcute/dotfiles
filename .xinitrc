@@ -21,6 +21,7 @@ firefox &
 code &
 discord &
 spotify &
+alacritty &
 
 # Start qtile
 qtile start
