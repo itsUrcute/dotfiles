@@ -16,5 +16,11 @@ nitrogen --set-zoom-fill ~/Pictures/anime_room.png &
 # Screenshot utility
 flameshot &
 
+# other apps
+firefox &
+code &
+discord &
+spotify &
+
 # Start qtile
 qtile start

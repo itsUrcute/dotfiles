@@ -79,7 +79,7 @@ keys = [
 groups = [
     Group("1", matches=[]),
     Group("2", matches=[Match(title="Code - OSS")]),
-    Group("3", matches=[Match(title="Discord")]),
+    Group("3", matches=[Match(title="Discord"), Match(title="V Discord Updater")]),
     Group("4", matches=[Match(title="Mozilla Firefox")]),
     Group("5", matches=[]),
     Group("6", matches=[]),
@@ -113,7 +113,7 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4, margin=6),
+    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=0, margin=6),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Bsp(),
