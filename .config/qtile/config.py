@@ -162,14 +162,14 @@ screens = [
                 widget.Net(format="{down}↓↑{up}", prefix="k",),
                 widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
                 widget.Image(
-                    filename="/home/urcute/.config/qtile/assets/battery_2.png",
+                    filename="~/.config/qtile/assets/battery_2.png",
                     margin=4,
                     ),
                 widget.Battery(
                     format="{percent:2.00%}",
                     ),
                 widget.Image(
-                    filename="/home/urcute/.config/qtile/assets/volume.png",
+                    filename="~/.config/qtile/assets/volume.png",
                     margin=4,
                     ),
                 widget.Volume(),
