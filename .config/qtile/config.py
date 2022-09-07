@@ -23,11 +23,18 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+import os
+import subprocess
 
-from libqtile import bar, layout, widget
+from libqtile import bar, hook, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+
+@hook.subscribe.startup
+def autostart():
+    home = os.path.expanduser("~/.config/qtile/scripts/autostart.sh")
+    subprocess.Popen([home])
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -74,6 +81,10 @@ keys = [
     
     # Screenshots
     Key([mod], "p", lazy.spawn("flameshot gui")),
+    
+    # Volume control
+    Key([mod], "z", lazy.spawn("amixer -q -D sset Master 2%-")),
+    Key([mod], "x", lazy.spawn("amixer -q -D sset Master 2%+")),
 ]
 
 groups = [

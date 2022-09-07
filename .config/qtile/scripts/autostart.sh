@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # disable beep
 xset -b
 
@@ -22,6 +24,3 @@ code &
 discord &
 spotify &
 alacritty &
-
-# Start qtile
-qtile start
