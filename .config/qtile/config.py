@@ -301,7 +301,7 @@ screens = [
                     background='#4B427E',
                 ),
 
-                widget.PulseVolume(font='JetBrains Mono Bold',
+                widget.Volume(font='JetBrains Mono Bold',
                     fontsize=12,
                     padding=10,
                     background='#4B427E',
