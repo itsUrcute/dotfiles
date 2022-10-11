@@ -190,7 +190,6 @@ def open_launcher():
 # █▄█ █▀█ █▀▄
 
 screens = [
-
     Screen(
         top=bar.Bar(
             [
@@ -326,7 +325,7 @@ screens = [
 
             ],
             30,
-            margin = [6,6,6,6]
+            margin = [9,6,6,6]
         ),
     ),
 ]
