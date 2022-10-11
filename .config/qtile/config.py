@@ -107,7 +107,8 @@ groups = [
     Group("6", label="", matches=[]),
     Group("7", label="", matches=[]),
     Group("8", label="", matches=[]),
-    Group("9", label="", matches=[Match(wm_class=["spotify", "Spotify"]), Match(title="Spotify")]),
+    Group("9", label="", matches=[]),
+    Group("0", label="", matches=[Match(wm_class=["spotify", "Spotify"]), Match(title="Spotify")]),
     ]
 
 for i in groups:
@@ -212,10 +213,10 @@ screens = [
                     fontsize=16,
                     borderwidth=3,
                     highlight_method='block',
-                    active='#7F61A7',
+                    active='#BD85CB',
                     block_highlight_text_color="#CFB3E5",
                     highlight_color='#4B427E',
-                    inactive='#BD85CB',
+                    inactive='#7F61A7',
                     foreground='#4B427E',
                     background='#4B427E',
                     this_current_screen_border='#52548D',
