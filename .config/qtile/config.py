@@ -76,21 +76,21 @@ keys = [
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
 #    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-#    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod], "r", lazy.spawn("rofi -show combi"), desc="Spawn a command using a prompt widget"),
 
 ##CUSTOM
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume 0 +5%"), desc='Volume Up'),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume 0 -5%"), desc='volume down'),
     Key([], "XF86AudioMute", lazy.spawn("pulsemixer --toggle-mute"), desc='Volume Mute'),
-    Key([], "XF86AudioPlay", lazy.spawn("playerctl play-pause"), desc='playerctl'),
-    Key([], "XF86AudioPrev", lazy.spawn("playerctl previous"), desc='playerctl'),
-    Key([], "XF86AudioNext", lazy.spawn("playerctl next"), desc='playerctl'),
+    Key([mod], "Up", lazy.spawn("playerctl play-pause"), desc='playerctl'),
+    Key([mod], "Down", lazy.spawn("playerctl play-pause"), desc='playerctl'),
+    Key([mod], "Left", lazy.spawn("playerctl previous"), desc='playerctl'),
+    Key([mod], "Right", lazy.spawn("playerctl next"), desc='playerctl'),
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl s 10%+"), desc='brightness UP'),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl s 10%-"), desc='brightness Down'),
 
 ##Other stuff
-	Key([mod], "h", lazy.spawn("roficlip"), desc='clipboard'),
+    Key([mod], "h", lazy.spawn("roficlip"), desc='clipboard'),
     Key([mod], "s", lazy.spawn("flameshot gui"), desc='Screenshot'),
 
 ]
@@ -279,14 +279,14 @@ screens = [
                     background='#4B427E',
                 ),
 
-                widget.Battery(format=' {percent:2.0%}',
+                widget.Battery(format='{percent:2.0%}',
                     font="JetBrains Mono ExtraBold",
                     fontsize=12,
-                    padding=10,
+                    padding=0,
                     background='#4B427E',
                 ),
 
-                widget.Memory(format='﬙{MemUsed: .0f}{mm}',
+                widget.Memory(format='﬙ {MemUsed: .0f}{mm}',
                     font="JetBrains Mono Bold",
                     fontsize=12,
                     padding=10,
@@ -296,7 +296,7 @@ screens = [
                 widget.TextBox(
                     text="",
                     font="Font Awesome 6 Free Solid",
-                    fontsize=25,
+                    fontsize=15,
                     padding=0,
                     background='#4B427E',
                 ),
