@@ -201,6 +201,7 @@ screens = [
                     filename='~/.config/qtile/Assets/launch_Icon.png',
                     margin=2,
                     background='#1F1D2E',
+                    mouse_callbacks={ "Button1" : open_launcher }
                 ),
 
                 widget.Image(
