@@ -21,4 +21,4 @@ firefox &
 alacritty &
 
 # Wallpaper
-wal -i Assets/Aesthetic2.png &
+wal -i ~/.config/qtile/Assets/Aesthetic2.png &
